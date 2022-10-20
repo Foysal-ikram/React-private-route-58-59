@@ -2,7 +2,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './Loader/UserContext';
 
 const Signup = () => {
@@ -12,6 +12,7 @@ const Signup = () => {
 
 
     const { user , createUser} = useContext (AuthContext) ;
+    const navigate = useNavigate() ;
 
 
 
@@ -42,6 +43,7 @@ const Signup = () => {
         .then(result=>{
             const user = result.user ;
             console.log(error)
+            navigate('/') ;
         })
         .catch(error=>console.error(error))
 
