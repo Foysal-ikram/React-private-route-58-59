@@ -11,7 +11,7 @@ import { AuthContext } from './Loader/UserContext';
 const Header = () => {
 
     const {user , logOut} = useContext(AuthContext) ;
-    console.log(' ---------it is --------' ,user)
+    // console.log(' ---------it is --------' ,user)
 
 
     const signOut =() =>{
@@ -36,6 +36,7 @@ const Header = () => {
                             
                             <small className='pt-2 me-5'>{user?.email}</small>
                             <Nav.Link as={Link}  to="/">Home</Nav.Link>
+                            <Nav.Link as={Link}  to="/news">News Section</Nav.Link>
 
                             {
                                 user?.email?

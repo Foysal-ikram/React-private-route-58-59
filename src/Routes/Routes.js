@@ -8,6 +8,7 @@ import Login from "../Components/Login"
 import Signup from "../Components/Signup";
 import Booking from "../Components/Booking";
 import PrivateRoute from "./PrivateRoute";
+import News from "../News/News";
   
 
   export const router = createBrowserRouter([
@@ -32,7 +33,11 @@ import PrivateRoute from "./PrivateRoute";
             {
               path : "/booking" ,
               element : <PrivateRoute><Booking></Booking></PrivateRoute>
-            }
+            },
+            {
+              path : "/news" ,
+              element :  <News></News>
+            },
         ]
     }
 
