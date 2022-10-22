@@ -9,6 +9,7 @@ import Signup from "../Components/Signup";
 import Booking from "../Components/Booking";
 import PrivateRoute from "./PrivateRoute";
 import News from "../News/News";
+import Catagories from "../News/Catagories";
   
 
   export const router = createBrowserRouter([
@@ -21,6 +22,12 @@ import News from "../News/News";
                path : "/" ,
                element : <Home></Home> ,
               
+            },
+            {
+              path : "/catagory/:id" ,
+              element : <Catagories></Catagories> ,
+              loader:({params}) => fetch(`http://localhost:5000/category/${params.id}`) 
+            
             },
             {
               path : 'login',

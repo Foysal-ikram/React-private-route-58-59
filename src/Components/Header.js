@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {LinkContainer} from 'react-router-bootstrap'
 import { Link } from 'react-router-dom';
+import Left from '../News/Left';
 import { AuthContext } from './Loader/UserContext';
 
 
@@ -40,12 +41,15 @@ const Header = () => {
 
                             {
                                 user?.email?
-                                <Button className='btn btn-sm ms-2' onClick={signOut}>Sign Out</Button>
+                                <Button className='btn btn-sm ms-2 ' onClick={signOut}>Sign Out</Button>
                                 :
                                 <LinkContainer to="/login"><Nav.Link >Log in</Nav.Link></LinkContainer>
                             }
                             
                         </Nav>
+                        <div className='d-md-none'>
+                            <Left></Left>
+                        </div>
                         
                     </Navbar.Collapse>
                 </Container>

@@ -8,8 +8,8 @@ import Right from './Right';
 const News = () => {
     return (
         <div className='row text-center'>
-           <div className='col' ><Left></Left></div>
-           <div className='col-md-8' ><MainNews></MainNews></div>
+           <div className='col-md-2 d-md-block d-none' ><Left></Left></div>
+           <div className='col-md-7' ><MainNews></MainNews></div>
            <div className='col' ><Right></Right></div>
         </div>
     );

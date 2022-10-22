@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Left = () => {
     const [catagories, setCatagories] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/catagories')
+        fetch('http://localhost:5000/categories')
             .then(res => res.json())
             .then(data => setCatagories(data))
 
@@ -13,7 +13,7 @@ const Left = () => {
 
 
     return (
-        <div className='ms-2 mt-5'>
+        <div className='ms-2 mt-5 '>
             {
                 catagories.map(catagory => 
                     <ListGroup>
